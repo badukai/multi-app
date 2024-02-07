@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.App-logo {
+    text-align: center;
+    pointer-events: none;
+    margin-bottom: 5rem;
+}
+
+.App-logo img {
+    width: 30%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo img {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.wrapper {
+    background: url('../imgs/home-bg.jpg')no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 150px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(171deg, rgba(109, 78, 143, 0.6) 0%, rgba(113, 210, 226, 0.6) 81%);
+    z-index: -1;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =====navbar====== */
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar-list {
+    width: 100%;
+    text-align: center;
+
+}
+
+.navbar-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.navbar-item a:hover,
+.navbar-item a.active {
+    color: #61dafb;
+}
+
+@media (max-width: 767px) {
+    .navbar ul li {
+        display: block;
+    }
+
+    .navbar-list {
+        padding: 0;
+    }
+}
+
+/* ====inner-page-header===== */
+header {
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(171deg, rgba(109, 78, 143, 0.6) 0%, rgba(113, 210, 226, 0.6) 81%);
+    z-index: -1;
+}
+
+header .row {
+    align-items: center;
+}
+
+header .App-logo {
+    margin-bottom: 0;
+}
+
+header .App-logo img {
+    width: 60%;
+}
+
+header .navbar-item a {
+    font-size: 14px;
+    ;
+}
+
+header .navbar-item a.active,
+header .navbar-item a:hover {
+    color: #6F5091;
+}
+
+/* ========to do====== */
+.todowrapper h1 {
+    text-align: center;
+    margin: 60px 0;
+    color: #e00;
+    font-weight: 800;
+    text-decoration: underline;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.todoform {
+    background: #6F5091;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.add-todo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.add-todo label {
+    font-weight: bold;
+    color: #fff;
+    font-size: "14px";
+    font-family: sans-serif;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.add-todo input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.add-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.add-button:hover {
+    background-color: cornflowerblue;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    padding: 15px;
+    border: 1px solid #b31313;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.todo-list li span {
+    display: inline-block;
+}
+
+.todo-list li span:last-child {
+    float: right;
+}
+
+.todo-list li span button {
+    border: none;
+}
+
+.todo-list .delete-button,
+.todo-list .edit-button {
+    background: transparent;
+    color: #e00;
+    font-size: 30px;
+    transition: all linear 0.3s;
+}
+
+
+.todo-list .edit-button {
+    color: #46b8da;
+    margin-right: 20px;
+}
+
+.todo-list .delete-button:hover,
+.todo-list .edit-button:hover {
+    background: transparent;
+    color: #000;
+
+}
